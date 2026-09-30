@@ -1,0 +1,39 @@
+MIT License
+
+Copyright (c) 2026 Andre Carbajal
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Additional bundled-component notices for 1.0 desktop packages
+------------------------------------------------------------
+The MIT notice above applies to included third-party code. Original additions
+by Tomáš Trlíček are governed by LICENSE.
+
+Node.js and its bundled third-party components: see runtime/LICENSE in each
+desktop ZIP. The runtime binary is an unmodified official Node distribution
+binary, with architecture and checksum recorded in build-info.json.
+
+Production dependencies: see DEPENDENCIES.json and the original licence/notice
+files retained under server/node_modules in each desktop ZIP. These components
+retain their respective terms; the custom project licence does not restrict
+rights granted by their licences.
+
+Project branding uses the mcp.af icon and wordmark supplied by the maintainer.
+See assets/PROVENANCE.md in the public repository, or plugin/assets/
+in desktop packages. Affinity, Canva, OpenAI, ChatGPT and Codex names remain their owners' marks.

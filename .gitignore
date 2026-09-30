@@ -1,0 +1,20 @@
+# Public documentation and branding only. Keep implementation and release ZIPs outside this repository.
+*
+!/.gitignore
+!/assets/
+!/docs/
+!/AGENT-PROMPT.txt
+!/CONTRIBUTING.md
+!/INSTALL.md
+!/LICENSE
+!/README.md
+!/RELEASE-NOTES.md
+!/THIRD-PARTY-NOTICES.txt
+!/UPDATING.md
+!/VALIDATION.md
+!/assets/PROVENANCE.md
+!/assets/mcp-af-icon.png
+!/assets/mcp-af-wordmark.svg
+!/docs/TECHNICAL.md
+!/docs/batch-tools.md
+!/docs/sdk-notes.md

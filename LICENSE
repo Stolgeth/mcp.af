@@ -1,0 +1,116 @@
+mcp.af Free Use, No Modification License
+License version 1.0 — 30 September 2026
+
+Copyright (c) 2026 Tomáš Trlíček
+https://github.com/Stolgeth
+
+1. Scope and ownership
+
+This license applies only to original code, skills, documentation and other
+materials in mcp.af in which Tomáš Trlíček owns copyright (the
+"Covered Materials"). It does not claim ownership of third-party materials.
+Third-party code, dependencies, runtimes, trademarks and artwork are excluded
+and remain subject to their respective terms. See THIRD-PARTY-NOTICES.txt and
+the notices supplied with those components. In a file containing both upstream
+code and original additions, this license governs only the original additions.
+Nothing here limits rights granted under an applicable third-party license.
+
+2. Free use
+
+You are granted a worldwide, non-exclusive, royalty-free license to download,
+install, execute, inspect and use the Covered Materials, without modification,
+for personal, educational, nonprofit and commercial purposes. You may make
+copies for these purposes, including internal deployment and backups.
+The original development sources are not distributed with public releases.
+No fee, royalty or attribution on your work output is required.
+
+3. Unmodified sharing
+
+You may redistribute complete, unmodified copies of the Covered Materials
+without charging for the software itself, provided this license and all
+applicable copyright, third-party and attribution notices are preserved.
+You may use the software to provide paid services and charge for your work.
+Third-party materials may be redistributed only as their own terms permit.
+
+4. No modification or derivative versions
+
+Except as expressly allowed below, you may not modify, adapt, translate, patch,
+merge, or create derivative versions of the Covered Materials, or distribute
+such versions, without prior written permission from Tomáš Trlíček. You may
+not remove notices or represent a modified version as an official release.
+Rights not expressly granted are reserved, subject to applicable mandatory law.
+
+5. Configuration, scripts and output
+
+The restriction above does not prevent normal configuration through documented
+settings, environment variables, connection paths, or configuration files.
+It also does not prevent installers from generating machine-specific
+configuration or performing documented packaging steps.
+
+You may create, modify and run your own independent prompts, scripts and
+integrations through the software's exposed interfaces. You may freely create,
+modify, use and sell your own documents, artwork and other output. This license
+does not impose restrictions on that output or claim ownership of it.
+
+6. Hosting platform rights
+
+Nothing in this license overrides rights necessarily granted under the
+applicable terms of a platform on which the copyright owner hosts the
+Covered Materials, including GitHub's viewing and repository-forking
+functionality. Such rights do not grant a general right to modify the Covered
+Materials outside what those terms or this license expressly permit.
+
+7. Termination
+
+The permissions in this license terminate if you materially violate its terms.
+On termination, stop using and redistributing the Covered Materials and delete
+copies under your control, except copies required by law. Rights under
+independent third-party licenses are unaffected.
+
+8. Use at your own risk; no warranty; limitation of liability
+
+YOU USE THE COVERED MATERIALS AT YOUR OWN RISK, TO THE MAXIMUM EXTENT PERMITTED
+BY APPLICABLE LAW. You are responsible for assessing their suitability for
+your purposes, reviewing instructions and generated actions, setting appropriate
+permissions, maintaining backups, and checking results before relying on them.
+
+Operation and results depend on factors outside the copyright owner's control,
+including Affinity and other third-party software, AI models and agents, user
+instructions, configuration and permissions, operating systems, hardware,
+networks, external services, dependencies and updates. These factors may cause
+unexpected actions, errors, incompatibility, interruptions or loss of data.
+No continued compatibility, availability, accuracy or particular outcome is
+promised, and inclusion of a third-party integration is not a warranty of that
+third party's products or services.
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE COVERED MATERIALS ARE
+PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EXPRESS, IMPLIED OR STATUTORY, INCLUDING MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY, RELIABILITY, SECURITY OR
+ERROR-FREE OR UNINTERRUPTED OPERATION.
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, TOMÁŠ TRLÍČEK AND ANY OTHER
+COPYRIGHT HOLDERS OF THE COVERED MATERIALS SHALL NOT BE LIABLE FOR ANY CLAIM,
+DAMAGE, LOSS, COST OR OTHER LIABILITY ARISING OUT OF OR IN CONNECTION WITH
+THE COVERED MATERIALS, THEIR INSTALLATION, USE, INABILITY TO USE, OR RESULTS,
+INCLUDING THEIR INTERACTION WITH THIRD-PARTY SOFTWARE, SERVICES OR SYSTEMS.
+THIS EXCLUSION APPLIES TO DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
+EXEMPLARY AND PUNITIVE DAMAGES, INCLUDING LOSS, CORRUPTION OR UNINTENDED
+ALTERATION OF FILES OR DATA; LOST PROFITS, REVENUE, BUSINESS, GOODWILL OR
+OPPORTUNITIES; BUSINESS INTERRUPTION; SYSTEM FAILURE; AND RECOVERY OR
+REPLACEMENT COSTS. IT APPLIES WHETHER THE CLAIM ARISES IN CONTRACT, TORT
+(INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGE.
+
+These provisions apply only to the extent permitted by applicable law.
+Nothing in this license excludes or limits liability, warranties, remedies
+or statutory rights that cannot lawfully be excluded or limited, including
+any applicable mandatory consumer rights. If a limitation is unenforceable,
+it applies only to the maximum extent the law permits. The references to
+external factors do not override these mandatory legal protections.
+
+9. Third-party names and marks
+
+This license grants no rights in Affinity, Canva, OpenAI, ChatGPT, Codex or
+other third-party names, icons or trademarks. mcp.af is an
+independent integration and does not imply sponsorship or endorsement.

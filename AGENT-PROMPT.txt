@@ -1,0 +1,17 @@
+Install mcp.af 1.0.0 from this ZIP on this computer. Work locally.
+Read INSTALL.md and agent-skills/mcp-af-install/SKILL.md, inspect the
+installer, verify the package, and confirm the OS and native CPU architecture.
+Identify and show the actual Codex profile used by my desktop app. Ask me for
+the path if you cannot establish it; do not use a sandbox account's profile.
+Pass that absolute path as --codex-home to install, doctor and uninstall.
+Use the bundled runtime and installation script. Run the write-access dry-run
+first. If the OS denies access, give me the exact command for a normal terminal
+under my desktop account; do not report completion or switch profiles.
+Preserve my other plugins and settings. Register both the MCP and its Affinity skill through the supported
+Codex plugin mechanism. Run the read-only connection check and report whether
+the actual enabled plugin, cached skill and MCP runtime are verified in that
+same profile, separately from whether Affinity is reachable. Do not change any
+Affinity documents. Tell me if I need to enable MCP in Affinity. After verified
+registration, tell me to restart Codex and open a new local task to load plugin
+mcp.af and skill mcp-af. Do not modify the packaged MCP code or
+bypass OS security controls.
