@@ -1,4 +1,4 @@
-# Public documentation and branding only. Keep implementation and release ZIPs outside this repository.
+# Public documentation, branding and approved installation downloads only. Keep development sources private.
 *
 !/.gitignore
 !/assets/
@@ -18,3 +18,7 @@
 !/docs/TECHNICAL.md
 !/docs/batch-tools.md
 !/docs/sdk-notes.md
+!/mcp.af-1.0.0-windows-x64.zip
+!/mcp.af-1.0.0-windows-arm64.zip
+!/mcp.af-1.0.0-macos-arm64.zip
+!/SHA256SUMS.txt

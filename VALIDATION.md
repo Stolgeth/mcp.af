@@ -90,11 +90,11 @@ Public OpenAI directory eligibility is a separate matter. No public OpenAI direc
 
 ## Public publication set
 
-The public GitHub preparation contains an explicit allowlist of documentation
-and branding, plus three desktop release ZIPs and their installation documents.
+The public GitHub preparation contains an explicit allowlist of documentation, branding, installation documents and
+three desktop ZIPs. The same ZIPs are available in the repository and as release assets.
 There is no exported developer source tree, source archive, source map, lockfile,
 build toolchain or private Git history. The public repository ignore rules allow
-only its prepared documentation and branding paths. All public files are listed
+its prepared documentation, branding, three versioned ZIPs and checksum file. All public files are listed
 with hashes in PUBLIC-FILES.json alongside the publication instructions.
 
 Application JavaScript is bundled/minified, not encrypted. Workflow skills,
