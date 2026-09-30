@@ -28,6 +28,9 @@ Try asking:
 - “Arrange my artboards and align their positions to whole pixels before export.”
 - “Organise my layers, put them in order, and give them clear names.”
 
+<img width="612" height="973" alt="Image showing capabilities" src="https://github.com/user-attachments/assets/bfa8e22c-431d-40b9-a7db-aa4a7f1189a2" />
+
+
 ## mcp.af 1.0
 
 **Free for personal and commercial use.** Includes the connector, an Affinity workflow skill and agent-guided installation instructions. Each desktop ZIP also includes its native Node runtime and required dependencies; no separate Node.js, npm or Git installation is needed.
