@@ -37,7 +37,7 @@ Try asking:
 
 **Free for personal and commercial use.** Includes the connector, an Affinity workflow skill and agent-guided installation instructions. Each desktop ZIP also includes its native Node runtime and required dependencies; no separate Node.js, npm or Git installation is needed.
 
-Download a package directly below, or use [GitHub Releases](https://github.com/Stolgeth/mcp.af/releases). The same verified ZIPs are also available in the repository file list.
+Download the current **1.1.0** package below. These verified ZIPs are also available in the repository file list. Older releases are retained in the [release archive](https://github.com/Stolgeth/mcp.af/releases) for rollback.
 
 | Package | Computer | Validation |
 |---|---|---|
@@ -95,6 +95,6 @@ Free personal and commercial use under the [mcp.af Free Use, No Modification Lic
 
 Report issues at [Stolgeth/mcp.af](https://github.com/Stolgeth/mcp.af/issues), including OS/CPU, Affinity and desktop client versions, and reproduction steps. Remove private document content and credentials from diagnostics.
 
-This public repository contains documentation, branding and the desktop installation ZIPs. Download the package for your computer above or from GitHub Releases. They include a bundled, minified connector without source maps, installation tools, human-readable workflow instructions and the required third-party runtime components. Minification is a distribution format, not a guarantee against inspection or reverse engineering.
+This public repository contains documentation, branding and the desktop installation ZIPs. Download the current package for your computer above. The ZIPs include a bundled, minified connector without source maps, installation tools, human-readable workflow instructions and the required third-party runtime components. Minification is a distribution format, not a guarantee against inspection or reverse engineering.
 
 These packages use local plugin installation. They are not a public OpenAI directory listing.

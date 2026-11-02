@@ -9,7 +9,7 @@ Version 1.1 improves reusable script workflows and editing of SVG artwork alread
 - **More dependable script reuse.** The workflow inspects saved source and its inputs before execution, saves self-contained scripts when requested, and reads back saved code to confirm persistence.
 - **Clear script-context checks.** Required resources and configuration are checked before editing. Running saved source through MCP does not automatically attach its library bundle or panel context.
 - **Representation-aware SVG edits.** Inspect editable vectors and embedded documents before choosing an edit. Whole-artwork transforms and targeted fills preserve hierarchy, clipping, selection and unrelated artwork. Unsupported internal edits to embedded artwork are declined without silently flattening or rebuilding it.
-- **Updated validation and packaging.** Windows x64, Windows ARM64 and Apple Silicon packages retain the same plugin identity, explicit desktop-profile installation and bundled runtime. The public repository keeps prior downloads and adds versioned 1.1 downloads.
+- **Updated validation and packaging.** Windows x64, Windows ARM64 and Apple Silicon packages retain the same plugin identity, explicit desktop-profile installation and bundled runtime. The current repository contains only the three 1.1 downloads; earlier packages remain in historical releases for rollback.
 
 All 18 existing tools remain available. The execution wrapper, native passthrough, serialized calls and no-replay behavior are unchanged. No additional public tool, runtime dependency or background service was added.
 

@@ -47,7 +47,7 @@ Each ZIP contains 1,417 files: the bundled/minified connector, installer and doc
 
 The three runtime downloads match pinned official HTTPS checksums; detached signatures were not verified. Dependency versions/integrity are checked against the lockfile during assembly. The licence remains revision 1.0; the product version is 1.1.0. Required third-party notices are preserved.
 
-The public preparation contains only allowlisted docs, branding and approved downloads. Prior 1.0 ZIPs are preserved byte-for-byte in the repository; release assets contain only 1.1 ZIPs and their companion documents. The public repository checksum file covers both versions; the 1.1 release checksum file covers its three ZIPs. No development source archive or private Git history is exported.
+The public preparation contains only allowlisted docs, branding and approved downloads. The current repository and prepared release assets contain only the three 1.1 ZIPs and their companion documents. Both checksum files cover those same 1.1 downloads. Prior 1.0 packages remain in Git history and the superseded 1.0 release for rollback. No development source archive or private Git history is exported.
 
 ## Limits
 
