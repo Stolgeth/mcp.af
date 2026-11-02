@@ -1,5 +1,21 @@
 # Affinity 3.3 SDK notes
 
+## Affinity 3.3.3 / mcp.af 1.1
+
+Observed on **Affinity 3.3.3.5004 Win32 (Oct 30 2026)**, tested 2 November 2026. This build reports SDK 0.1. Read version-matched live modules; availability of a wrapper alone does not prove an operation works.
+
+- `list_library_scripts` returned a comma-separated text list with a trailing comma. `read_library_script` read a known title; a unique test entry saved with `save_script_to_library` read back with matching source. No overwrite or deletion semantics are claimed.
+- A self-contained synchronous IIFE ran in native mode and, with an explicit return of that expression, in verified mode. SDK timer completion and awaited rejection behaved as documented. Native mode remains unverified, even when a particular script emits valid readback.
+- `Environment.resources.all` was empty; a missing required resource could be detected before mutation. Library source execution does not establish bundle/configuration propagation.
+- SVG opened with `Document.load` exposed nested containers and editable shape leaves; the top container was not an `isGroupNode`. The same SVG placed through File > Place exposed `isEmbeddedDocumentNode` with no ordinary child nodes. This setup is equivalent-representation coverage, not a Brand Kit panel test.
+- A compound whole-artwork uniform scale/translation and one targeted fill edit passed bounds, clipped bounds, fill, parent/child identity, stacking, selection, unrelated-artwork and undo/redo readback. Before/after renders were inspected. Embedded internal editing was refused without altering the embedded asset or history.
+- `Document.load` on an already-open path may return the existing document rather than a fresh baseline. Live regression runs use unique copies to avoid mistaking a modified open document for a clean fixture.
+- File access outside `Environment.fileSystemRoots` returned `PERMISSION_DENIED` even though file-system permission was enabled. Check both the permission and allowed roots; do not treat a broad enabled flag as access to every path.
+
+See [scripts and placed artwork](scripts-and-brand-kit.md) for production workflow boundaries. No new bundle attachment, Brand Kit panel control or general embedded internal-edit API is claimed.
+
+## Earlier 3.3 baseline
+
 Verified on Windows Affinity 3.3.0.4850, 2026-09-17. Other operating systems and SDK versions require their own regression run. Read version-matched MCP documentation instead of assuming all methods work.
 
 - Import `Application` from `/application.js`; legacy `app` and extensionless imports still worked.

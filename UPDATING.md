@@ -1,7 +1,7 @@
 # Updating mcp.af
 
-mcp.af 1.0 is the first public release. These instructions apply when a newer
-mcp.af release becomes available. There is no automatic updater.
+Use these instructions to update an existing mcp.af installation, including
+1.0.0 to 1.1.0. There is no automatic updater.
 
 1. Download the new ZIP for your native OS and CPU from
    [Stolgeth/mcp.af Releases](https://github.com/Stolgeth/mcp.af/releases).

@@ -1,4 +1,4 @@
-# Technical reference — mcp.af 1.0
+# Technical reference — mcp.af 1.1
 
 ## Installation and configuration
 
@@ -48,6 +48,14 @@ Send this to `affinity_create_artboard_grid`, then one `render_spread` call for 
 
 By default, `execute_script` returns a structured execution envelope rather than unclassified console output. Set `mode:"native"` for original source/result semantics, or adapt async code to return/await its completion. Status result fields use snake_case. Other upstream tools' result formats remain unchanged.
 
+## Script library and placed SVG workflows
+
+Version 1.1 adds workflow guidance and focused regression checks without new public tools or changes to the execution/transport contracts. Use `list_library_scripts`, inspect the exact title with `read_library_script`, execute reviewed self-contained source, and verify saved source after `save_script_to_library`. Listing format remains upstream plain text. Do not assume title splitting, overwrite semantics or bundle-aware invocation.
+
+`Environment.resources` exists in Affinity 3.3.3; its bundle was empty in the tested MCP context. Required resources and configuration must be checked before mutation. Reading and executing library source does not carry its associated bundle, including in native mode. MCP protocol-resource forwarding is a separate mechanism.
+
+Placed SVG work uses actual document nodes. Editable vectors support verified whole-artwork transforms and targeted fill changes; embedded internal vector edits are declined unless a separate route has been established. Preserve clipping, hierarchy, selection and unrelated artwork. No Brand Kit panel browsing, placement or setting control is claimed. Acceptance uses equivalent editable and embedded SVG representations, not Brand Kit-origin detection. See [scripts and placed artwork](scripts-and-brand-kit.md).
+
 ## Configuration and scope
 
 | Environment variable | Default |
@@ -58,7 +66,7 @@ By default, `execute_script` returns a structured execution envelope rather than
 
 Timeouts accept integers from 100 to 300000 milliseconds. Use the loopback default for normal local use. Pointing the adapter at another host makes that host the execution environment; this package does not add authentication to Affinity's server. Raw SDK access remains powerful and is governed by Affinity's permissions. The adapter adds no telemetry, network listener, or external reporting. Upstream tools that publish SDK hints/issues remain available and should only be used with the user's authorization.
 
-Focused batch tools target directly contained, uniquely named artboards and fields. Layout targets must have equal sizes; rotated boards, nested group traversal and general-purpose rich-text formatting are outside the tested scope. Preview output is bounded to 2048 pixels and 10 MB. Tests cover the workflows below, not the entire Affinity SDK. See ../VALIDATION.md for platform evidence. Other app versions and multiple competing bridge processes are not covered by these tests.
+Focused batch tools target directly contained, uniquely named artboards and fields. Layout targets must have equal sizes; rotated boards, nested group traversal and general-purpose rich-text formatting are outside the tested scope. Preview output is bounded to 2048 pixels and 10 MB. Tests cover specific workflows, not the entire Affinity SDK. See [the validation record](../VALIDATION.md) for platform evidence and exact app builds. Multiple competing bridge processes are not covered by these tests.
 
 ## References
 

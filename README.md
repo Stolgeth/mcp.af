@@ -19,6 +19,8 @@ mcp.af connects a compatible local AI assistant to Affinity, allowing it to insp
 - Inspect and update multiple text fields.
 - Work with vector and raster content through Affinity's SDK.
 - Generate previews and export files.
+- Reuse inspected, self-contained scripts from Affinity’s script library.
+- Edit placed SVG artwork according to its actual vector or embedded structure.
 
 Use it for production tasks, repeated layouts and custom automation. General Affinity tools and SDK scripting remain available alongside shortcuts for repeated artboard and text operations.
 
@@ -31,7 +33,7 @@ Try asking:
 <img width="612" height="973" alt="Image showing capabilities" src="https://github.com/user-attachments/assets/bfa8e22c-431d-40b9-a7db-aa4a7f1189a2" />
 
 
-## mcp.af 1.0
+## mcp.af 1.1
 
 **Free for personal and commercial use.** Includes the connector, an Affinity workflow skill and agent-guided installation instructions. Each desktop ZIP also includes its native Node runtime and required dependencies; no separate Node.js, npm or Git installation is needed.
 
@@ -39,15 +41,21 @@ Download a package directly below, or use [GitHub Releases](https://github.com/S
 
 | Package | Computer | Validation |
 |---|---|---|
-| [mcp.af-1.0.0-windows-x64.zip](https://github.com/Stolgeth/mcp.af/raw/refs/heads/main/mcp.af-1.0.0-windows-x64.zip) | Windows x64 | Native installation and Affinity connection tested |
-| [mcp.af-1.0.0-windows-arm64.zip](https://github.com/Stolgeth/mcp.af/raw/refs/heads/main/mcp.af-1.0.0-windows-arm64.zip) | Windows ARM64 | Native operation tested; confirmed by maintainer |
-| [mcp.af-1.0.0-macos-arm64.zip](https://github.com/Stolgeth/mcp.af/raw/refs/heads/main/mcp.af-1.0.0-macos-arm64.zip) | Apple Silicon Mac | Native operation tested; confirmed by maintainer |
+| [mcp.af-1.1.0-windows-x64.zip](https://github.com/Stolgeth/mcp.af/raw/refs/heads/main/mcp.af-1.1.0-windows-x64.zip) | Windows x64 | 1.1 installation, update and Affinity regression tests passed |
+| [mcp.af-1.1.0-windows-arm64.zip](https://github.com/Stolgeth/mcp.af/raw/refs/heads/main/mcp.af-1.1.0-windows-arm64.zip) | Windows ARM64 | Native 1.0 operation confirmed by maintainer; 1.1 package audited |
+| [mcp.af-1.1.0-macos-arm64.zip](https://github.com/Stolgeth/mcp.af/raw/refs/heads/main/mcp.af-1.1.0-macos-arm64.zip) | Apple Silicon Mac | Native 1.0 operation confirmed by maintainer; 1.1 package audited |
 
 Compare downloads with [SHA256SUMS.txt](SHA256SUMS.txt).
 
 See [VALIDATION.md](VALIDATION.md) for the exact checks and remaining limits.
 
 GitHub also displays automatic **“Source code”** ZIP/tar.gz links. These are snapshots of this public repository, not the private development sources. The v1.0.0 snapshot contains documentation and branding; the current main branch also contains the packaged installation ZIPs. For installation, choose the Windows or Mac download above.
+
+## New in 1.1
+
+More dependable script reuse and clearer handling of placed SVG artwork, including artwork you have placed from Brand Kit. The workflow checks script inputs and available resources, distinguishes editable vectors from embedded documents, and verifies geometry, fills and preserved structure after edits. Embedded internal artwork is not silently flattened or rebuilt.
+
+This release does not automate the Brand Kit panel or attach resource bundles to scripts. The existing general SDK interface and all 18 tools remain available. See the [release notes](RELEASE-NOTES.md) and [workflow reference](docs/scripts-and-brand-kit.md).
 
 ## Install with your assistant
 

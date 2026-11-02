@@ -1,103 +1,58 @@
-# mcp.af 1.0 validation
+# mcp.af 1.1 validation
 
-Release version: 1.0.0. Build date: 30 September 2026.
-Maintainer: Tomáš Trlíček (Stolgeth).
+Release **1.1.0**, built and tested **2 November 2026**. Maintainer: Tomáš Trlíček (Stolgeth).
 
-## Current release checks
+Windows live tests used **Affinity 3.3.3.5004 Win32 (Oct 30 2026)**, the packaged **Node 24.21.0** runtime and **Codex CLI 0.166.0-alpha.5.1**. Tests ran against the bundled/minified connector, not just the development sources.
+
+## Results
 
 | Check | Result |
 |---|---|
-| Automated execution, transport and installer suite | 21 test entries passed |
-| Windows x64 native runtime and actual Codex CLI installation | Passed in isolated profiles |
-| Windows ARM64 native operation | Passed; confirmed by maintainer on 30 September 2026 |
-| macOS Apple Silicon native operation | Passed; confirmed by maintainer on 30 September 2026 |
-| Plugin identity and version | mcp-af@stolgeth-mcp-af, version 1.0.0, enabled |
-| Workflow and installation skills | mcp-af and mcp-af-install validate |
-| Explicit profile overrides wrong inherited CODEX_HOME | Passed; no Affinity registration in ambient profile |
-| Read-only config / missing explicit profile | Rejected before durable installation |
-| Missing cached skill, wrong cached runtime, disabled plugin, stale registered marker | Registration failure, separate from connectivity |
-| Repeat install, moved extraction, uninstall/reinstall | Passed |
-| Real Affinity connection | 18 tools available: 7 added tools plus 11 native tools; server mcp-af 1.0.0 |
-| Supplied icon | 1024×1024 PNG, preserved unchanged |
-| Supplied wordmark | SVG, viewBox 0 0 1024 361, preserved unchanged |
-| Bundled/minified runtime | General proxy transport tests, fresh Windows x64 installation, 57-artboard and general Affinity live suites passed |
-| Distribution hygiene | Desktop ZIPs omit developer sources, maps, tests, examples, caches and local profiles |
-| Privacy scan | No maintainer machine paths or personal test-folder names in distributed files; public authorship retained |
+| Automated execution, transport and installer suite | 21 test entries passed against source and packaged connector |
+| General MCP forwarding | Tools, unknown tool names, prompts, resources, templates, pagination and recovery passed controlled-server checks |
+| Execution contracts | Verified returns, awaited completion/rejection, native passthrough, bounded logs, serialization and no mutation replay passed |
+| Fresh Windows x64 installation | Actual Codex registration, cached skill and live 18-tool Affinity connection passed in an isolated profile |
+| 1.0.0 → 1.1.0 update | Actual CLI update passed; cached skill/reference and runtime point to 1.1.0; prior release retained |
+| Explicit profile selection | Wrong inherited profile stayed unregistered; absent profile and read-only config were rejected before durable installation |
+| Registration diagnostics | Missing skill, wrong runtime, disabled plugin and stale saved state correctly failed registration independently of connectivity |
+| Repeat install / moved extraction / uninstall-reinstall | Passed |
+| Script library | Existing title read without executing its source; unique test entry saved and exact source readback passed |
+| Self-contained script | Explicit inputs produced the expected result in verified mode; original source emitted the same result in native mode |
+| Resource preflight | Empty MCP resource bundle observed; missing resource detected before document mutation |
+| SVG representations | Editable nested/clipped vectors and a real embedded SVG distinguished through SDK types |
+| Editable SVG changes | Uniform whole-artwork scale/translation and targeted fill passed geometry, clipped-bound and colour readback |
+| Preservation | Parent/child identity, order, selection, unrelated artwork, embedded representation and undo/redo passed |
+| Unsupported internal embedded edit | Mixed-target plan rejected before commands; artwork and history unchanged |
+| Visual SVG result | Before/after renders inspected; target changed, clipping remained correct, embedded copy and sentinel unchanged |
+| 57-artboard regression | Creation, arrangement, numbering, 171 text fields, 57 markers, targeted corrections, Unicode, linked frames, guards and previews passed |
+| General Affinity regression | Ordinary documents, nested layers, vector/raster work, transformations, duplication/reparenting/deletion, fill, PNG/SVG export, save/reopen and undo passed |
+| Skill metadata and references | Simple frontmatter reviewed directly; local links checked; actual Codex cached workflow skill/reference verified |
+| All three desktop archives | Inner/outer hashes, paths, CPU headers, macOS executable mode, common payload and privacy checks passed |
 
-The installer regression harness is maintained in the private development repository.
-Permission denial is reproduced using a read-only fixture config; the tests do
-not change Windows account permissions or ACLs. The user's active desktop
-profile and plugin were not replaced. CLI checks establish on-disk registration,
-not that an already-running desktop has reloaded it.
+## SVG fixture and script evidence
 
-Read-only connection checks did not create or edit Affinity documents. The test coverage does not establish live coverage for every possible
-proofreading, layer ordering or pixel-alignment scenario.
+The test SVG is original synthetic artwork with nested containers, a clipped stripe, three editable shapes and an unrelated sentinel. It was opened into native vector nodes, and the same SVG was embedded using File > Place during fixture setup. The saved native baseline was copied for each repeat run; all edits and assertions ran through MCP. This is equivalent-representation validation authorized for the production scope, not a Brand Kit panel test.
 
-## Archive validation
+The script-library test created one uniquely titled, harmless self-contained entry and reused it for the packaged rerun. No pre-existing library source was executed or overwritten. No supported library-entry deletion API was assumed. Raw evidence and native test files stay private.
 
-The private archive audit checks every inner file checksum, outer ZIP hashes,
-unsafe/duplicate paths, native runtime CPU headers and macOS executable metadata.
-It rejects developer source archives and source maps, and confirms packaged identities,
-skill paths, metadata lengths and original artwork bytes. SHA256SUMS.txt identifies the delivered archives.
+## Platform evidence
 
-Each desktop package contains the bundled/minified connector, installer, doctor,
-workflow instructions, branding, native runtime and required dependencies. All
-dependency licence notices remain. Original source modules, developer tests,
-build tooling and the full lockfile remain private; no source archive is published.
-Archive checks reject known private machine paths and local profile/build
-artifacts. Source test paths use fictional Unicode examples. The original icon
-contains standard colour-profile and resolution metadata, with no personal text
-or location metadata; both branding files remain byte-identical to those supplied.
+Windows x64 1.1 has the native evidence above. The maintainer confirmed successful Windows ARM64 and Apple Silicon Mac operation for 1.0 on 30 September 2026. That confirmation remains valid historical evidence; no new 1.1 native-device run on those platforms was performed here.
 
-The trimmed Windows runtime passed the general proxy transport tests, including
-tools, prompts, resources, pagination, reconnection and prevention of mutation
-replay. A new isolated Codex installation verified actual registration and a live
-Affinity connection with 18 tools. The same bundled connector and cleaned dependencies are used in the ARM64
-packages; these rebuilt archives pass content/architecture
-checks, while the maintainer's earlier native Mac/ARM test confirmation remains
-the native-operation evidence.
+The 1.1 ARM64 archives use the same architecture-specific Node runtimes and locked dependency versions as 1.0. Their platform-independent payloads match the tested Windows x64 package. Architecture, executable metadata, hashes and content were audited for all three. This does not substitute for a new native-device regression run.
 
-Three native Node 24.21.0 runtime downloads match their pinned official HTTPS
-checksums. Detached release signatures were not verified. Locked dependency
-versions and integrity metadata are checked during assembly; dependency notices
-are retained. All archives carry the mcp.af licence revision 1.0. The upstream MIT
-notice and other third-party rights are retained.
+## Packaging and privacy
 
-## Platform evidence and scope
+Each ZIP contains 1,417 files: the bundled/minified connector, installer and doctor, workflow/installation instructions, branding, native runtime and required dependencies/notices. The archives exclude developer sources, source maps, tests, fixtures, raw evidence, caches, local profiles and private paths. The supplied icon and wordmark remain byte-identical. Public authorship is intentional.
 
-The maintainer confirms successful native testing on Windows ARM64 and macOS
-Apple Silicon. This report records that confirmation alongside the automated
-Windows x64 results. Mac/ARM device and OS version details, individual test cases
-and execution logs were not supplied to this build environment, so no more
-specific coverage is claimed. All three release archives also pass the binary
-architecture, checksum and packaged-content checks.
+The three runtime downloads match pinned official HTTPS checksums; detached signatures were not verified. Dependency versions/integrity are checked against the lockfile during assembly. The licence remains revision 1.0; the product version is 1.1.0. Required third-party notices are preserved.
 
-A fresh OS image without developer tools was not available. The Windows test
-uses the packaged runtime and dependencies, but is not full clean-machine
-certification. A separate ChatGPT-only UI import route is unverified. There is
-no signed graphical installer. The custom licence has not received legal review.
+The public preparation contains only allowlisted docs, branding and approved downloads. Prior 1.0 ZIPs are preserved byte-for-byte in the repository; release assets contain only 1.1 ZIPs and their companion documents. The public repository checksum file covers both versions; the 1.1 release checksum file covers its three ZIPs. No development source archive or private Git history is exported.
 
-## Editing coverage
+## Limits
 
-The bundled/minified Windows release was retested directly in Affinity 3.3.0.4850: 57 artboards, 171 text fields
-and 57 markers; grid creation and arrangement, numbering and corrections with
-readback; Unicode and linked frames; ordinary documents and nested layers;
-vector/raster work, transforms, native PNG/SVG rendering/export, save/reopen,
-undo and awaited scripts. These are targeted tests, not complete SDK coverage. No claim is made that every Affinity API, filter, AI action or UI dialog
-has been tested.
+These are focused regression checks, not certification of every SDK method, raster filter, custom dialog, AI action or concurrent-client scenario. No Brand Kit panel operation, script-bundle attachment or arbitrary embedded internal editing is claimed. The connector remains a general SDK adapter with workflow guidance and optional batch tools.
 
-Public OpenAI directory eligibility is a separate matter. No public OpenAI directory submission is claimed.
+The user's active desktop profile was not replaced. CLI checks prove on-disk registration and connectivity, not that an already-running desktop has reloaded. A fresh operating-system image was not available. A separate ChatGPT-only UI import path and public OpenAI directory listing remain outside this validation.
 
-## Public publication set
-
-The public GitHub preparation contains an explicit allowlist of documentation, branding, installation documents and
-three desktop ZIPs. The same ZIPs are available in the repository and as release assets.
-There is no exported developer source tree, source archive, source map, lockfile,
-build toolchain or private Git history. The public repository ignore rules allow
-its prepared documentation, branding, three versioned ZIPs and checksum file. All public files are listed
-with hashes in PUBLIC-FILES.json alongside the publication instructions.
-
-Application JavaScript is bundled/minified, not encrypted. Workflow skills,
-installation instructions and third-party code remain inspectable as required
-for operation and their licences. This packaging keeps the original development
-sources private; it does not promise protection against reverse engineering.
+Bundled JavaScript is minified, not encrypted; this distribution keeps development sources private but does not promise prevention of inspection or reverse engineering.

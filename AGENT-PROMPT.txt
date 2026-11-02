@@ -1,4 +1,4 @@
-Install mcp.af 1.0.0 from this ZIP on this computer. Work locally.
+Install mcp.af 1.1.0 from this ZIP on this computer. Work locally.
 Read INSTALL.md and agent-skills/mcp-af-install/SKILL.md, inspect the
 installer, verify the package, and confirm the OS and native CPU architecture.
 Identify and show the actual Codex profile used by my desktop app. Ask me for

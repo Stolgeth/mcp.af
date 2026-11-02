@@ -95,7 +95,7 @@ For a future mcp.af update, use the same --codex-home and permanent root as
 your existing mcp.af installation. See UPDATING.md in the desktop package or
 docs/UPDATING.md in the source repository. Version 1.0 is the first public release.
 
-The adapter/runtime live under releases/1.0.0-OS-CPU. The installer generates a
+The adapter/runtime live under releases/1.1.0-OS-CPU. The installer generates a
 dedicated marketplace called stolgeth-mcp-af, containing mcp-af.
 It calls codex plugin marketplace add, then codex plugin add; it does not replace
 the user's personal marketplace or rewrite config.toml itself. Every CLI call,

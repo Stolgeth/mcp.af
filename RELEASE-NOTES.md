@@ -1,58 +1,40 @@
-# mcp.af 1.0
+# mcp.af 1.1
 
-**Independent MCP connector for Affinity, intended for Codex and compatible local ChatGPT workflows.**
+**Independent MCP connector for Affinity, built for Codex and compatible local ChatGPT workflows.**
 
-Turn instructions into actions inside Affinity. From arranging objects to correcting text across an entire document.
+Version 1.1 improves reusable script workflows and editing of SVG artwork already in your document. Your work stays in Affinity as native objects and editable text.
 
-Describe the task. Let your assistant handle the steps.
+## What changed
 
-## What you can do
+- **More dependable script reuse.** The workflow inspects saved source and its inputs before execution, saves self-contained scripts when requested, and reads back saved code to confirm persistence.
+- **Clear script-context checks.** Required resources and configuration are checked before editing. Running saved source through MCP does not automatically attach its library bundle or panel context.
+- **Representation-aware SVG edits.** Inspect editable vectors and embedded documents before choosing an edit. Whole-artwork transforms and targeted fills preserve hierarchy, clipping, selection and unrelated artwork. Unsupported internal edits to embedded artwork are declined without silently flattening or rebuilding it.
+- **Updated validation and packaging.** Windows x64, Windows ARM64 and Apple Silicon packages retain the same plugin identity, explicit desktop-profile installation and bundled runtime. The public repository keeps prior downloads and adds versioned 1.1 downloads.
 
-- Create, move and organise objects and layers.
-- Build and arrange artboards.
-- Inspect and update multiple text fields.
-- Work with vector and raster content through Affinity's SDK.
-- Generate previews and export files.
+All 18 existing tools remain available. The execution wrapper, native passthrough, serialized calls and no-replay behavior are unchanged. No additional public tool, runtime dependency or background service was added.
 
-Your work stays in Affinity, using native objects and editable text. Use mcp.af for production tasks, repeated layouts and custom automation.
+## Validation
 
-## Included
+The bundled Windows x64 connector passed the 21 automated regression entries, real Codex fresh-install and 1.0 → 1.1 update checks, the 57-artboard/text suite, general document/vector/raster/export checks, and the focused script/SVG suite on **Affinity 3.3.3.5004**. Before/after SVG renders were visually inspected.
 
-- General Affinity MCP connector and seven convenience tools for repeated work.
-- Affinity workflow skill, named `mcp-af`.
-- Agent-guided installation instructions and the `mcp-af-install` skill.
-- Bundled native Node runtime, locked dependencies and integrity checks.
-- Explicit desktop profile selection and separate checks for registration and Affinity connectivity.
-- New mcp.af icon, wordmark and general workflow starter prompts.
+All three archives pass integrity, architecture, common-payload and privacy checks. Windows ARM64 and Apple Silicon native operation was confirmed by the maintainer for 1.0; the new 1.1 archives were audited here but were not rerun on those devices in this validation session. See [VALIDATION.md](VALIDATION.md) for exact evidence and limits.
 
-Desktop downloads contain the runtime, installation tools, skills, branding and
-required notices. Original development sources, tests, build tools and the full dependency lockfile
-remain private. The distributed connector is bundled and minified without source maps. Local profiles and machine-specific
-installation paths are not bundled; the installer creates paths for your computer.
+## Download and update
 
-This is the first public **mcp.af** release, tagged **v1.0.0**. Future releases will use the same mcp.af plugin identity and documented update process.
-
-## Downloads and installation
-
-| File | Intended computer |
+| Package | Computer |
 |---|---|
-| `mcp.af-1.0.0-windows-x64.zip` | Windows x64 |
-| `mcp.af-1.0.0-windows-arm64.zip` | Windows ARM64 |
-| `mcp.af-1.0.0-macos-arm64.zip` | Apple Silicon Mac |
-| `SHA256SUMS.txt` | Checksums for all three desktop ZIPs |
+| `mcp.af-1.1.0-windows-x64.zip` | Windows x64 |
+| `mcp.af-1.1.0-windows-arm64.zip` | Windows ARM64 |
+| `mcp.af-1.1.0-macos-arm64.zip` | Apple Silicon Mac |
 
-Use the included `AGENT-PROMPT.txt` in a local Codex task. The agent identifies the desktop profile, verifies the package, runs the bundled installer, and checks registration and connectivity independently. If OS access is denied, run its quoted command in a normal terminal under your desktop account. Restart Codex and open a new task after registration.
+Compare your download with the release's `SHA256SUMS.txt`. Each ZIP contains the connector, native Node runtime, required dependencies, workflow skill, installation instructions and branding. No separate Node.js, npm or Python installation is needed.
 
-No separate Node.js/npm installation is required. Affinity must be installed and its MCP server enabled. Ordinary web chat/file upload does not install local software. A separate ChatGPT-only UI import route is unverified.
+For an existing installation, follow [UPDATING.md](UPDATING.md) and use the same desktop Codex profile and installation root. After verified registration, restart Codex and open a new local task. The plugin is **mcp.af**, its skill is **mcp-af**, and the release version is **1.1.0**.
 
-## Validation and limits
+## Scope
 
-Windows x64 installation and the live Affinity connection passed automated and local tests. The maintainer also confirms successful native operation on Windows ARM64 and macOS Apple Silicon. See `VALIDATION.md` for evidence and limitations. This release includes no signed graphical installer or automatic update service.
+Placed-SVG validation uses equivalent native vector and embedded SVG representations. It does not automate Brand Kit browsing, asset placement or settings. Resource-bundle attachment and arbitrary embedded internal-vector editing are not supported by this workflow. General SDK access remains available for separately verified operations.
 
-The connector runs locally; instructions and tool results are still processed by the assistant client/provider. Affinity edits are not transactional and interrupted operations may leave partial changes.
+Free for personal and commercial use under the existing [mcp.af licence](LICENSE). Copyright © 2026 **Tomáš Trlíček (@Stolgeth)**. Required third-party notices remain included. Original development sources stay private.
 
-## Free personal and commercial use
-
-By **Tomáš Trlíček (@Stolgeth)**. Original additions use the **mcp.af Free Use, No Modification License**, revision 1.0. Free personal and commercial use is permitted; modification of original additions requires written permission. Normal configuration, independent scripts and your creative output remain permitted. Third-party components retain their own terms.
-
-Independent project. Not affiliated with, sponsored by or endorsed by Affinity, Canva or OpenAI.
+Independent project; not affiliated with, sponsored by or endorsed by Affinity, Canva or OpenAI.

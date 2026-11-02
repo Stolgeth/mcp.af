@@ -1,4 +1,4 @@
-# Public documentation, branding and approved installation downloads only. Keep development sources private.
+# Public docs, branding and approved downloads only. Keep implementation private.
 *
 !/.gitignore
 !/assets/
@@ -9,6 +9,7 @@
 !/LICENSE
 !/README.md
 !/RELEASE-NOTES.md
+!/SHA256SUMS.txt
 !/THIRD-PARTY-NOTICES.txt
 !/UPDATING.md
 !/VALIDATION.md
@@ -17,8 +18,11 @@
 !/assets/mcp-af-wordmark.svg
 !/docs/TECHNICAL.md
 !/docs/batch-tools.md
+!/docs/scripts-and-brand-kit.md
 !/docs/sdk-notes.md
-!/mcp.af-1.0.0-windows-x64.zip
-!/mcp.af-1.0.0-windows-arm64.zip
 !/mcp.af-1.0.0-macos-arm64.zip
-!/SHA256SUMS.txt
+!/mcp.af-1.0.0-windows-arm64.zip
+!/mcp.af-1.0.0-windows-x64.zip
+!/mcp.af-1.1.0-macos-arm64.zip
+!/mcp.af-1.1.0-windows-arm64.zip
+!/mcp.af-1.1.0-windows-x64.zip
