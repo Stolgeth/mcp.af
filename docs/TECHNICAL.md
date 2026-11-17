@@ -1,4 +1,4 @@
-# Technical reference — mcp.af 1.1
+# Technical reference — mcp.af 1.2
 
 ## Installation and configuration
 
@@ -13,6 +13,12 @@ Launching it alone in a terminal does not provide an interactive application.
 Use the documented environment settings below for configuration. After changing
 plugin registration, restart Codex and open a new local task.
 
+## Discovery and other local MCP clients
+
+The default upstream transport uses SSE. For a server offering Streamable HTTP, set `AFFINITY_MCP_TRANSPORT=streamable-http` and set `AFFINITY_MCP_SSE_URL` to its advertised endpoint. Transport selection applies before a tool call. Status reports upstream identity, advertised capabilities, and total tool count across pages. The original first-page count remains available. When Affinity starts late, the bridge retries catalog reads with backoff and notifies the client when discovery recovers.
+
+Any local MCP client supporting stdio can launch the extracted package. In its server settings, use the absolute path to `runtime/node.exe` on Windows or `runtime/bin/node` on macOS as the command. Supply the absolute path to `server/app/connector.mjs` as the single argument. Keep the package together. Client configuration formats vary.
+
 ## Tools and call economy
 
 | Tool | Work performed in one client call |
@@ -23,6 +29,8 @@ plugin registration, restart Codex and open a new local task.
 | `affinity_number_artboards` | Number existing fields, skip matching text, verify every target |
 | `affinity_correct_text` | Guarded batch corrections, linked-story grouping, exact readback |
 | `affinity_preview_artboard` | Cropped inline PNG via native export, temporary file cleanup |
+| `affinity_search_sdk` | Search the running app’s topic names and selected documentation bodies |
+| `affinity_execute_native` | Original script arguments and output schema advertised by Affinity |
 | `affinity_status` | Cached connection/catalog status with freshness information |
 
 All upstream tools remain available, and unfamiliar future tool names are forwarded without a fixed allowlist. Resources, resource templates and prompts are proxied when exposed upstream. `execute_script` supports verified synchronous/promise execution and unchanged native mode. See [the skill's batch reference](batch-tools.md) for the optional shortcuts.

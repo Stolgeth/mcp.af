@@ -95,7 +95,7 @@ For a future mcp.af update, use the same --codex-home and permanent root as
 your existing mcp.af installation. See UPDATING.md in the desktop package or
 docs/UPDATING.md in the source repository. Version 1.0 is the first public release.
 
-The adapter/runtime live under releases/1.1.0-OS-CPU. The installer generates a
+The adapter/runtime live under releases/1.2.0-OS-CPU. The installer generates a
 dedicated marketplace called stolgeth-mcp-af, containing mcp-af.
 It calls codex plugin marketplace add, then codex plugin add; it does not replace
 the user's personal marketplace or rewrite config.toml itself. Every CLI call,
@@ -131,7 +131,7 @@ Affinity status. It edits no document. Its JSON contains `registration` and
 `connectivity` independently. A successful direct connection does not prove the
 plugin is registered or loaded by the desktop.
 
-- Exit 0: registration verified and Affinity native tools reachable.
+- Exit 0: registration verified and the upstream catalog reachable. Doctor reports scripting availability separately.
 - Exit 2: registration verified, but the adapter/Affinity connection is unavailable.
 - Exit 3: registration is missing, disabled, mismatched or cannot be verified,
   even if Affinity is reachable. Read registration.error.

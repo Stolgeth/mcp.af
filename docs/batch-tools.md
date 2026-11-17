@@ -24,7 +24,7 @@ Ranges are half-open `[begin,end)` and use Unicode code points. For `A😀 typo`
 
 ## Readback and previews
 
-Inspection works on ordinary documents as well as artboard documents. It defaults to at most 100 artboards; `offset` and `limit` page them. `include_layers:true` adds a top-level layer inventory and `next_layer_offset`. `include_text:true` includes up to `field_limit` artboard fields (default 500) and 2000 characters per field. Truncation is explicit. Use a scoped SDK read for nested content or full source text of a longer field.
+Inspection works on ordinary documents as well as artboard documents. It defaults to at most 100 artboards; `offset` and `limit` page them. `include_layers:true` adds a top-level layer inventory and `next_layer_offset`. `include_text:true` includes up to `field_limit` artboard fields (default 500) and 2000 characters per field. Truncation is explicit. Follow a truncated artboard’s continuation object verbatim. For a longer story, pass its node_path with view="text", retain the UUID, spread_index and expected_history_position, and advance text_offset to next_text_offset. Read nested children and selected nodes with view="children" and view="selection".
 
 `affinity_preview_artboard` takes UUID, `artboard`, optional `spread_index` and `max_dimension` (default 1024, maximum 2048). It exports a PNG to a unique temporary filename in Affinity's first allowed filesystem root, reads it inside Affinity and removes that file. It returns an inline image, dimensions and byte count. Filesystem permission is required. A cleanup warning identifies a file that remains. Selection and document history are unchanged. `render_selection` is unsuitable for cropped artboard previews on the tested 3.3 build.
 

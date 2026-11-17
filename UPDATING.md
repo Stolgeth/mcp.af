@@ -1,10 +1,10 @@
 # Updating mcp.af
 
 Use these instructions to update an existing mcp.af installation, including
-1.0.0 to 1.1.0. There is no automatic updater.
+1.1.0 to 1.2.0. There is no automatic updater.
 
 1. Download the new ZIP for your native OS and CPU from
-   [Stolgeth/mcp.af Releases](https://github.com/Stolgeth/mcp.af/releases).
+   [the current release](https://github.com/Stolgeth/mcp.af/releases/latest).
    Compare it with that release's SHA256SUMS.txt, then extract it into a new folder.
 2. Finish tasks currently using mcp.af. Read the new release notes and included
    installation instructions before updating.

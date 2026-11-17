@@ -1,3 +1,3 @@
-1b75a6c99b66eff082e421d284485bc947eba563c37132acb235060c627c1ccc  mcp.af-1.1.0-windows-x64.zip
-3ca21cfb7a63f160557ded3d500e819bb479808557c95caa58eacce5f322fc20  mcp.af-1.1.0-windows-arm64.zip
-594e20ff9e56a6c2103744703dc70c6a76cf6e8a0d9628bcba0a1a883f128065  mcp.af-1.1.0-macos-arm64.zip
+065b0f317cc206d5d7561a08a91bd8f559bbb74c3fc95c0cd671cfb5b7c32a25  mcp.af-1.2.0-macos-arm64.zip
+1351be2efabfc4dca699521ccec10c453e78c453b2540581a69af383467a55df  mcp.af-1.2.0-windows-arm64.zip
+2edad08db73cf24bd809ad3c6b0c403b8e4fe9a675104d27201b0960f5a4efba  mcp.af-1.2.0-windows-x64.zip

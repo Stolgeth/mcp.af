@@ -33,29 +33,27 @@ Try asking:
 <img width="612" height="973" alt="Image showing capabilities" src="https://github.com/user-attachments/assets/bfa8e22c-431d-40b9-a7db-aa4a7f1189a2" />
 
 
-## mcp.af 1.1
+## mcp.af 1.2
 
 **Free for personal and commercial use.** Includes the connector, an Affinity workflow skill and agent-guided installation instructions. Each desktop ZIP also includes its native Node runtime and required dependencies; no separate Node.js, npm or Git installation is needed.
 
-Download the current **1.1.0** package below. These verified ZIPs are also available in the repository file list. Older releases are retained in the [release archive](https://github.com/Stolgeth/mcp.af/releases) for rollback.
+Download the current **1.2.0** package below. These verified ZIPs are also available in the repository file list. Older releases are retained in the [release archive](https://github.com/Stolgeth/mcp.af/releases) for rollback.
 
 | Package | Computer | Validation |
 |---|---|---|
-| [mcp.af-1.1.0-windows-x64.zip](https://github.com/Stolgeth/mcp.af/raw/refs/heads/main/mcp.af-1.1.0-windows-x64.zip) | Windows x64 | 1.1 installation, update and Affinity regression tests passed |
-| [mcp.af-1.1.0-windows-arm64.zip](https://github.com/Stolgeth/mcp.af/raw/refs/heads/main/mcp.af-1.1.0-windows-arm64.zip) | Windows ARM64 | Native 1.0 operation confirmed by maintainer; 1.1 package audited |
-| [mcp.af-1.1.0-macos-arm64.zip](https://github.com/Stolgeth/mcp.af/raw/refs/heads/main/mcp.af-1.1.0-macos-arm64.zip) | Apple Silicon Mac | Native 1.0 operation confirmed by maintainer; 1.1 package audited |
+| [mcp.af-1.2.0-windows-x64.zip](https://github.com/Stolgeth/mcp.af/raw/refs/heads/main/mcp.af-1.2.0-windows-x64.zip) | Windows x64 | Windows x64 validation details below |
+| [mcp.af-1.2.0-windows-arm64.zip](https://github.com/Stolgeth/mcp.af/raw/refs/heads/main/mcp.af-1.2.0-windows-arm64.zip) | Windows ARM64 | Native 1.0 operation confirmed by maintainer; 1.2 archive verification |
+| [mcp.af-1.2.0-macos-arm64.zip](https://github.com/Stolgeth/mcp.af/raw/refs/heads/main/mcp.af-1.2.0-macos-arm64.zip) | Apple Silicon Mac | Native 1.0 operation confirmed by maintainer; 1.2 archive verification |
 
-Compare downloads with [SHA256SUMS.txt](SHA256SUMS.txt).
+Compare downloads with [SHA256SUMS.txt](https://github.com/Stolgeth/mcp.af/releases/download/v1.2.0/SHA256SUMS.txt).
 
 See [VALIDATION.md](VALIDATION.md) for the exact checks and remaining limits.
 
 GitHub also displays automatic **“Source code”** ZIP/tar.gz links. These are snapshots of this public repository, not the private development sources. The v1.0.0 snapshot contains documentation and branding; the current main branch also contains the packaged installation ZIPs. For installation, choose the Windows or Mac download above.
 
-## New in 1.1
+## New in 1.2
 
-More dependable script reuse and clearer handling of placed SVG artwork, including artwork you have placed from Brand Kit. The workflow checks script inputs and available resources, distinguishes editable vectors from embedded documents, and verifies geometry, fills and preserved structure after edits. Embedded internal artwork is not silently flattened or rebuilt.
-
-This release does not automate the Brand Kit panel or attach resource bundles to scripts. The existing general SDK interface and all 18 tools remain available. See the [release notes](RELEASE-NOTES.md) and [workflow reference](docs/scripts-and-brand-kit.md).
+Search the SDK documentation supplied by your running Affinity build. Inspect nested layers, selections and long stories with paginated results. Use native script parameters as exposed by the app. Discovery recovers when Affinity starts after the assistant, and upgrades preserve custom connection settings. See the [release notes](RELEASE-NOTES.md).
 
 ## Install with your assistant
 
